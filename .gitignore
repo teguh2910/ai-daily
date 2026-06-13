@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+.env
+.venv/
+venv/
+
+# Don't ignore generated site output (they're the actual blog)
+# !index.html
+# !feed.xml
