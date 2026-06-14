@@ -412,3 +412,6 @@ body::after {
   .post-body a { color: black; text-decoration: underline; }
   .post-card { break-inside: avoid; }
 }
+
+/* hide meta JSON block from view, parser still reads it */
+post-meta { display: none; }
