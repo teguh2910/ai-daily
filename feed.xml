@@ -5,8 +5,15 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 15 Jun 2026 08:03:20 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 08:04:12 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic Tarik Fable 5 dan Mythos 5 demi Kontrol Ekspor AS</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-16-anthropic-tarik-fable-mythos-kontrol-ekspor.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-16-anthropic-tarik-fable-mythos-kontrol-ekspor.html</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0700</pubDate>
+      <description>Anthropic menonaktifkan akses global ke model Fable 5 dan Mythos 5 setelah pemerintah AS mengeluarkan kebijakan kontrol ekspor demi keamanan nasional. Langkah ini memicu perdebatan soal batas berbagi teknologi AI frontier dengan peneliti di luar negeri.</description>
+    </item>
     <item>
       <title>CEO Perusahaan AI Minta Kongres AS Sahkan UU DNA Sintetis</title>
       <link>https://blog.ttmi.my.id/posts/2026-06-15-ceo-perusahaan-ai-minta-kongres-as-sahkan-uu-dna-sintetis.html</link>
