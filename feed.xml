@@ -5,8 +5,15 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 20 Jun 2026 08:03:34 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 08:09:29 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dataland, Museum Seni AI Pertama di Dunia, Resmi Dibuka di Los Angeles</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-21-museum-seni-ai-pertama-di-dunia-buka-di-los-angeles.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-21-museum-seni-ai-pertama-di-dunia-buka-di-los-angeles.html</guid>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0700</pubDate>
+      <description>Museum seni berbasis kecerdasan buatan pertama di dunia resmi dibuka di Los Angeles pada 20 Juni 2026. Kolaborasi antara Google dan seniman Refik Anadol menghadirkan pengalaman imersif menggunakan Large Nature Model.</description>
+    </item>
     <item>
       <title>Claude Code Artifacts Ubah Sesi Coding Jadi Dasbor Langsung</title>
       <link>https://blog.ttmi.my.id/posts/2026-06-20-claude-code-artifacts-dasbor-bersama.html</link>

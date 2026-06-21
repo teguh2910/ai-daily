@@ -293,7 +293,20 @@ def main():
     else:
         md = sys.stdin.read()
 
-    body_html = md_to_html(md)
+    # Detect if input is HTML (LLM-generated body) vs plain markdown.
+    # If the body looks like HTML, pass it through as-is. No wrapping, no processing.
+    # md_to_html wraps plain text in <p> which is correct for markdown.
+    # For HTML input (LLM output), we do NOT wrap or process — just pass through.
+    has_html = bool(re.search(r"<((p|h[1-6]|ul|ol|li|blockquote|pre|code|a|strong|em|table|div)\b)", md))
+    if has_html:
+        # LLM outputs HTML but sometimes wraps each paragraph in <p> then md_to_html
+        # wraps the whole thing in another <p>, creating <p><p>...</p></p>.
+        # Fix: strip the outer <p> from each paragraph.
+        body_html = re.sub(r"<p>\s*<p>", "<p>", md)
+        body_html = re.sub(r"</p>\s*</p>", "</p>", body_html)
+    else:
+        import html as _html
+        body_html = _html.unescape(md_to_html(md))
     post_url = f"https://blog.ttmi.my.id/posts/{args.date}-{args.slug}.html"
     html = render_post(args.date, args.title, args.summary, args.tags, body_html, args.slug,
                        hero_image=args.hero_image, hero_credit=args.hero_credit, post_url=post_url)
