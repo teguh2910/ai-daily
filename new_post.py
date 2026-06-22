@@ -160,6 +160,17 @@ def render_post(date: str, title: str, summary: str, tags: list[str], body_html:
         hero_html = f'<div class="hero-image"><img src="/assets/{hero_image}" alt="{title}" loading="lazy">{credit_html}</div>'
     reading_time = calc_reading_time(body_html)
     word_count = len(body_html.split())
+    site_url = "https://blog.ttmi.my.id"
+    # Pre-compute complex f-strings (Python 3.11 doesn't allow backslash in f-string expressions)
+    tag_meta = "\n".join(f'  <meta property="article:tag" content="{t}">' for t in tags[:5])
+    if hero_image:
+        og_image_html = f'<meta property="og:image" content="{site_url}/assets/{hero_image}">\n  <meta property="og:image:alt" content="{title}">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">'
+        twitter_image_html = f'<meta name="twitter:image" content="{site_url}/assets/{hero_image}">'
+        hero_full_url = f"{site_url}/assets/{hero_image}"
+    else:
+        og_image_html = f'<meta property="og:image" content="{site_url}/assets/hero-light-installation-museum.jpg">'
+        twitter_image_html = ''
+        hero_full_url = f"{site_url}/assets/hero-light-installation-museum.jpg"
     return f"""<!DOCTYPE html>
 <html lang="id">
 <head>
@@ -168,16 +179,78 @@ def render_post(date: str, title: str, summary: str, tags: list[str], body_html:
   <title>{title} — AI Daily</title>
   <meta name="description" content="{summary}">
   <meta name="theme-color" content="#0a0a0f">
+  <meta name="google-site-verification" content="-XPmvwqdXwmIqBQqVemlrNZsAFA1cuJS3QGrR87-SRE">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Teguh Yuhono">
+  <link rel="canonical" href="{post_url}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="/assets/style.css?v=3">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
-  <meta property="og:title" content="{title}">
-  <meta property="og:description" content="{summary}">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="{post_url}">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{summary}">
+  <meta property="og:site_name" content="AI Daily">
+  <meta property="og:locale" content="id_ID">
+  <meta property="article:published_time" content="{date}T00:00:00+07:00">
+  <meta property="article:author" content="Teguh Yuhono">
+  <meta property="article:section" content="AI News">
+{tag_meta}
+  {og_image_html}
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{title}">
+  <meta name="twitter:description" content="{summary}">
+  <meta name="twitter:site" content="@teguhyuhono">
+  <meta name="twitter:creator" content="@teguhyuhono">
+  {twitter_image_html}
+
+  <!-- Schema.org Article structured data -->
+  <script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{title}",
+  "description": "{summary}",
+  "datePublished": "{date}T00:00:00+07:00",
+  "dateModified": "{date}T00:00:00+07:00",
+  "url": "{post_url}",
+  "mainEntityOfPage": {{
+    "@type": "WebPage",
+    "@id": "{post_url}"
+  }},
+  "author": {{
+    "@type": "Person",
+    "name": "Teguh Yuhono",
+    "url": "https://hermes.ttmi.my.id"
+  }},
+  "publisher": {{
+    "@type": "Organization",
+    "name": "AI Daily",
+    "logo": {{
+      "@type": "ImageObject",
+      "url": "{site_url}/assets/hero-light-installation-museum.jpg",
+      "width": 1200,
+      "height": 630
+    }}
+  }},
+  "image": {{
+    "@type": "ImageObject",
+    "url": "{site_url}/assets/{hero_image if hero_image else 'hero-light-installation-museum.jpg'}",
+    "width": 1200,
+    "height": 630
+  }},
+  "keywords": "{', '.join(tags[:5])}",
+  "articleSection": "AI News",
+  "wordCount": {word_count},
+  "inLanguage": "id-ID"
+}}
+  </script>
 </head>
 <body>
   {meta_block}
@@ -274,6 +347,47 @@ def render_post(date: str, title: str, summary: str, tags: list[str], body_html:
 """
 
 
+def render_donation_widget() -> str:
+    """Return the donation widget HTML/JS."""
+    payment_addresses = {
+        "btc": ("₿", "BTC", "3FQUMv4MfW9ntmJTDbKaS7YHnKu9TUhv7N"),
+        "eth": ("Ξ", "ETH", "0x74cDDBFA3c43316ff4D066fe79e75B6F89b544E4"),
+        "bnbbsc": ("🔶", "BNB", "0x05F9EdAee97e6f8534751de68AC5eEF739bEca4f"),
+        "sol": ("◎", "SOL", "3W24GeYY8CM6LgQM8a6Rdwxdwz3WpjKu9DE5P6fhA9Bz"),
+        "trx": ("⬡", "TRX", "TQJGge33fF4iea398bEX6sGx8HqTqH2FoQ"),
+        "xrp": ("✕", "XRP", "rKKbNYZRqwPgZYkFWvqNUFBuscEyiFyCE"),
+        "ltc": ("Ł", "LTC", "MC9Am59PL9CNGtZaG9Nw3gAqn1rdPaFsSE"),
+        "doge": ("Ð", "DOGE", "D5mZYoQqcU6wxCcn8KPEmaDsdM7dVi12ks"),
+        "matic": ("⬟", "MATIC", "0x011c586e54D0Bd4009a9ad2A080863026F10e85d"),
+    }
+    buttons = "\n".join(
+        f'<a href="https://nowpayments.io/donate/{addr}" target="_blank" rel="noopener" class="donate-coin"><span class="donate-icon">{icon}</span><span class="donate-name">{name}</span></a>'
+        for icon, name, addr in payment_addresses.values()
+    )
+    return (
+        "\n<style>\n"
+        ".donation-section{max-width:420px;margin:40px auto 20px;padding:28px 24px;background:linear-gradient(135deg,#0a0a1a 0%,#1a1a3a 100%);border-radius:16px;border:1px solid rgba(255,255,255,0.1);text-align:center}\n"
+        ".donation-section h3{color:#fff;font-size:17px;margin:0 0 6px}\n"
+        ".donation-section .donate-sub{color:#888;font-size:12px;margin:0 0 16px;line-height:1.5}\n"
+        ".donation-coins{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}\n"
+        ".donate-coin{display:inline-flex;flex-direction:column;align-items:center;padding:10px 12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:#fff;text-decoration:none;transition:all .2s;min-width:60px}\n"
+        ".donate-coin:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}\n"
+        ".donate-icon{font-size:20px;margin-bottom:2px}\n"
+        ".donate-name{font-size:10px;font-weight:600;color:#ccc}\n"
+        ".donation-section .powered{color:#555;font-size:10px;margin-top:12px}\n"
+        "</style>\n"
+        '<div class="donation-section">\n'
+        "<h3>☕ Support AI Daily</h3>\n"
+        '<p class="donate-sub">Dukung blog ini dengan crypto untuk tetap update setiap hari</p>\n'
+        '<div class="donation-coins">\n'
+        f"{buttons}\n"
+        '</div>\n'
+        '<p class="powered">Powered by NOWPayments</p>\n'
+        "</div>\n"
+    )
+
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", required=True, help="YYYY-MM-DD")
@@ -312,6 +426,15 @@ def main():
                        hero_image=args.hero_image, hero_credit=args.hero_credit, post_url=post_url)
 
     out = POSTS_DIR / f"{args.date}-{args.slug}.html"
+    
+    # Inject donation widget
+    if '</footer>\n</body>' in html:
+        donation_html = render_donation_widget()
+        html = html.replace(
+            '</footer>\n</body>',
+            f'</footer>\n\n{donation_html}\n</body>'
+        )
+    
     out.write_text(html, encoding="utf-8")
     print(f"✓ wrote {out.relative_to(ROOT)}")
 

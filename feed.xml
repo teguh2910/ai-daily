@@ -5,7 +5,7 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 21 Jun 2026 19:23:06 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 08:02:18 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ShinyHunters Ransomware Retas Dewan Eropa, Curi 297 GB Data HR dan Slip Gaji</title>
@@ -83,6 +83,13 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-14-hello-world-selamat-datang.html</guid>
       <pubDate>Sun, 14 Jun 2026 00:00:00 +0700</pubDate>
       <description>Artikel pembuka: kenalan dengan AI Daily — blog otomatis yang merangkum perkembangan AI terupdate setiap hari dalam Bahasa Indonesia. Powered by Hermes Agent.</description>
+    </item>
+    <item>
+      <title>Peraih Nobel Kimia 2024 John Jumper Tinggalkan Google DeepMind demi Anthropic</title>
+      <link>https://blog.ttmi.my.id/posts/2025-07-26-john-jumper-peraih-nobel-pindah-anthropic.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2025-07-26-john-jumper-peraih-nobel-pindah-anthropic.html</guid>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0700</pubDate>
+      <description>John Jumper, ilmuwan di balik AlphaFold yang meraih Nobel Kimia 2024, mengumumkan kepindahannya dari Google DeepMind ke Anthropic. Langkah ini menandai persaingan talenta yang semakin ketat di industri kecerdasan buatan.</description>
     </item>
   </channel>
 </rss>
