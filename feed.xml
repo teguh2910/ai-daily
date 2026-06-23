@@ -5,7 +5,7 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 23 Jun 2026 08:32:46 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 09:05:01 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Five Eyes Peringatkan: Serangan Siber AI Hanya Hitungan Bulan</title>
@@ -13,6 +13,13 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-23-five-eyes-peringatkan-ancaman-siber-ai.html</guid>
       <pubDate>Tue, 23 Jun 2026 00:00:00 +0700</pubDate>
       <description>Aliansi intelijen Five Eyes mengeluarkan peringatan publik langka bahwa model AI frontier akan segera meningkatkan kemampuan serangan siber terhadap pemerintah dan bisnis.</description>
+    </item>
+    <item>
+      <title>CISA Masukkan CVE-2026-20253 Splunk Enterprise ke KEV, RCE Pra-Auth Aktif</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-23-cisa-splunk-cve-2026-20253-pra-auth-rce.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-23-cisa-splunk-cve-2026-20253-pra-auth-rce.html</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0700</pubDate>
+      <description>CISA menambahkan CVE-2026-20253 ke KEV setelah WatchTowr merilis PoC RCE pra-autentikasi pada endpoint PostgreSQL sidecar Splunk Enterprise. Kerentanan berdampak pada sekitar 1.400 instance Splunk yang terekspos internet dan memungkinkan penyerang tanpa kredensial membuat atau menghapus file di server target.</description>
     </item>
     <item>
       <title>Saham Big Banks Kompak Koreksi, BBNI Anjlok 4,90% Pimpin Pelemahan</title>
