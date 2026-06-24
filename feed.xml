@@ -5,7 +5,7 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 24 Jun 2026 08:33:30 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 09:02:15 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MSCI Tunda Review Indonesia ke November 2026, Tetap Emerging Market</title>
@@ -20,6 +20,13 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-24-jumper-shazeer-hengkang-dari-deepmind.html</guid>
       <pubDate>Wed, 24 Jun 2026 00:00:00 +0700</pubDate>
       <description>Peraih Nobel Kimia 2024 John Jumper pindah ke Anthropic dan pencipta arsitektur Transformer Noam Shazeer kembali ke OpenAI, menandai minggu paling berat bagi Google DeepMind.</description>
+    </item>
+    <item>
+      <title>CVE-2026-20230: Cisco Unified CM WebDialer Dieksploitasi Aktif</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-24-cve-2026-20230-cisco-unicm-diserang-aktif.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-24-cve-2026-20230-cisco-unicm-diserang-aktif.html</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0700</pubDate>
+      <description>Kerentanan SSRF CVSS 8.6 di Cisco Unified CM WebDialer dieksploitasi aktif pada 21-22 Juni 2026; attacker menulis file arbitrary sebagai jalur eskalasi ke root RCE.</description>
     </item>
     <item>
       <title>Five Eyes Peringatkan: Serangan Siber AI Hanya Hitungan Bulan</title>
