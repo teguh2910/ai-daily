@@ -358,6 +358,9 @@ body::after {
 }
 .post-footer .action-btn:hover { color: var(--text); border-color: var(--accent); background: var(--bg-elevated); }
 .post-footer .action-btn.copied { color: var(--success); border-color: var(--success); }
+.post-footer .share-wa:hover { border-color: #25d366; color: #25d366; }
+.post-footer .share-x:hover { border-color: #1da1f2; color: #1da1f2; }
+.post-footer .share-tg:hover { border-color: #0088cc; color: #0088cc; }
 
 /* Back to top */
 .back-to-top {

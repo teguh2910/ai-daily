@@ -136,6 +136,7 @@ def calc_reading_time(body_html: str) -> int:
 
 def render_post(date: str, title: str, summary: str, tags: list[str], body_html: str, slug: str, hero_image: str | None = None, hero_credit: str | None = None, post_url: str = "") -> str:
     import json
+    from urllib.parse import quote_plus
     meta = {
         "date": date,
         "title": title,
@@ -163,6 +164,12 @@ def render_post(date: str, title: str, summary: str, tags: list[str], body_html:
     site_url = "https://blog.ttmi.my.id"
     # Pre-compute complex f-strings (Python 3.11 doesn't allow backslash in f-string expressions)
     tag_meta = "\n".join(f'  <meta property="article:tag" content="{t}">' for t in tags[:5])
+    # Pre-compute share URLs
+    encoded_title = quote_plus(title)
+    encoded_url = quote_plus(post_url)
+    share_wa = f"https://api.whatsapp.com/send?text={encoded_title}+{encoded_url}"
+    share_x = f"https://twitter.com/intent/tweet?text={encoded_title}&url={encoded_url}"
+    share_tg = f"https://t.me/share/url?url={encoded_url}&text={encoded_title}"
     if hero_image:
         og_image_html = f'<meta property="og:image" content="{site_url}/assets/{hero_image}">\n  <meta property="og:image:alt" content="{title}">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">'
         twitter_image_html = f'<meta name="twitter:image" content="{site_url}/assets/{hero_image}">'
@@ -288,6 +295,9 @@ def render_post(date: str, title: str, summary: str, tags: list[str], body_html:
       <span>Dipublikasikan otomatis oleh <a href="https://hermes.ttmi.my.id" target="_blank" rel="noopener">Hermes Agent</a></span>
       <div class="actions">
         <button class="action-btn" id="copy-link" data-url="{post_url}">🔗 Salin link</button>
+        <a class="action-btn share-wa" href="{share_wa}" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="action-btn share-x" href="{share_x}" target="_blank" rel="noopener">𝕏 Share</a>
+        <a class="action-btn share-tg" href="{share_tg}" target="_blank" rel="noopener">✈️ Telegram</a>
         <a class="action-btn" href="/">← Beranda</a>
       </div>
     </footer>
@@ -400,6 +410,33 @@ def main():
     ap.add_argument("--hero-credit", help="Image credit text (e.g. 'Photo by X on Unsplash')")
     args = ap.parse_args()
 
+    # Auto-download hero image from Unsplash if missing
+    if args.hero_image:
+        img_path = ROOT / "assets" / args.hero_image
+        if not img_path.exists():
+            print(f"⚠️  Hero image missing: {args.hero_image}")
+            # Try to download from Unsplash using a keyword-based search
+            import urllib.request, json as _json
+            keyword = args.hero_image.replace("hero-", "").replace(".jpg", "").replace("-", "+")
+            fallback = ROOT / "assets" / "hero-light-installation-museum.jpg"
+            downloaded = False
+            try:
+                # Use Unsplash source redirect (random image by keyword)
+                src_url = f"https://source.unsplash.com/1200x675/?{keyword}"
+                req = urllib.request.Request(src_url, headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=30) as resp:
+                    if resp.status == 200:
+                        with open(img_path, 'wb') as out:
+                            out.write(resp.read())
+                        print(f"✅ Downloaded from Unsplash: {img_path}")
+                        downloaded = True
+            except Exception as e:
+                print(f"   Download failed: {e}")
+            if not downloaded and fallback.exists():
+                import shutil
+                shutil.copy2(fallback, img_path)
+                print(f"   Using fallback: {fallback.name}")
+    
     if args.body_file == "-":
         md = sys.stdin.read()
     elif args.body_file:

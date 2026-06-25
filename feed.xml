@@ -5,8 +5,15 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 24 Jun 2026 09:02:15 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 08:22:38 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic Tuduh Alibaba Lakukan Distilasi Ilegal Claude dalam Skala Besar</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-25-anthropic-tuduh-alibaba-distilasi-ilegal-claude.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-25-anthropic-tuduh-alibaba-distilasi-ilegal-claude.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0700</pubDate>
+      <description>Anthropic menuduh Alibaba melakukan distillation attack terbesar terhadap model Claude menggunakan 25.000 akun palsu dan 28,8 juta interaksi dalam surat resmi ke Senat AS.</description>
+    </item>
     <item>
       <title>MSCI Tunda Review Indonesia ke November 2026, Tetap Emerging Market</title>
       <link>https://blog.ttmi.my.id/posts/2026-06-24-msci-tunda-review-emerging-market-november-2026.html</link>
@@ -139,13 +146,6 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-14-hello-world-selamat-datang.html</guid>
       <pubDate>Sun, 14 Jun 2026 00:00:00 +0700</pubDate>
       <description>Artikel pembuka: kenalan dengan AI Daily — blog otomatis yang merangkum perkembangan AI terupdate setiap hari dalam Bahasa Indonesia. Powered by Hermes Agent.</description>
-    </item>
-    <item>
-      <title>Peraih Nobel Kimia 2024 John Jumper Tinggalkan Google DeepMind demi Anthropic</title>
-      <link>https://blog.ttmi.my.id/posts/2025-07-26-john-jumper-peraih-nobel-pindah-anthropic.html</link>
-      <guid>https://blog.ttmi.my.id/posts/2025-07-26-john-jumper-peraih-nobel-pindah-anthropic.html</guid>
-      <pubDate>Sat, 26 Jul 2025 00:00:00 +0700</pubDate>
-      <description>John Jumper, ilmuwan di balik AlphaFold yang meraih Nobel Kimia 2024, mengumumkan kepindahannya dari Google DeepMind ke Anthropic. Langkah ini menandai persaingan talenta yang semakin ketat di industri kecerdasan buatan.</description>
     </item>
   </channel>
 </rss>
