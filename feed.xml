@@ -5,8 +5,15 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 25 Jun 2026 08:22:38 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 08:48:12 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IHSG Anjlok 3,56% ke 5.883, Asing Net Sell Rp 1,17 T</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-25-ihsg-anjlok-356-ke-5883-asing-net-sell-rp-117-t.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-25-ihsg-anjlok-356-ke-5883-asing-net-sell-rp-117-t.html</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0700</pubDate>
+      <description>IHSG ditutup anjlok 3,56% ke 5.883,88 pada 24 Juni 2026 dengan aksi jual bersih asing Rp 1,17 triliun. Rupiah melemah ke Rp 17.974/USD dan indeks berpotensi lanjut koreksi ke support 5.750-5.845.</description>
+    </item>
     <item>
       <title>Anthropic Tuduh Alibaba Lakukan Distilasi Ilegal Claude dalam Skala Besar</title>
       <link>https://blog.ttmi.my.id/posts/2026-06-25-anthropic-tuduh-alibaba-distilasi-ilegal-claude.html</link>
@@ -139,13 +146,6 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-15-ceo-perusahaan-ai-minta-kongres-as-sahkan-uu-dna-sintetis.html</guid>
       <pubDate>Mon, 15 Jun 2026 00:00:00 +0700</pubDate>
       <description>Para pemimpin OpenAI, Anthropic, Google DeepMind, dan Microsoft AI mengirim surat terbuka ke Kongres AS pada awal Juni 2026, meminta penyaringan pesanan DNA dan RNA sintetis dijadikan kewajiban hukum demi mencegah penyalahgunaan AI dalam pengembangan senjata biologis.</description>
-    </item>
-    <item>
-      <title>Hello, World — Selamat Datang di AI Daily</title>
-      <link>https://blog.ttmi.my.id/posts/2026-06-14-hello-world-selamat-datang.html</link>
-      <guid>https://blog.ttmi.my.id/posts/2026-06-14-hello-world-selamat-datang.html</guid>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0700</pubDate>
-      <description>Artikel pembuka: kenalan dengan AI Daily — blog otomatis yang merangkum perkembangan AI terupdate setiap hari dalam Bahasa Indonesia. Powered by Hermes Agent.</description>
     </item>
   </channel>
 </rss>
