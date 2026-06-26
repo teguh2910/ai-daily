@@ -5,8 +5,22 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 25 Jun 2026 09:16:16 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 09:07:57 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ivanti Sentry Rawan Eksploitasi: CVE-2026-10520 Raih Skor CVSS 10.0</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-26-ivanti-sentry-cve-2026-10520-cvss10-root-rce.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-26-ivanti-sentry-cve-2026-10520-cvss10-root-rce.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0700</pubDate>
+      <description>Ivanti Sentry memiliki kerentanan OS command injection dengan skor CVSS 10.0 yang memungkinkan penyerang tak terotentikasi mendapatkan eksekusi kode sebagai root, mengancam gateway mobile perusahaan.</description>
+    </item>
+    <item>
+      <title>Agen AI Multi: DeepMind Kucurkan 10 Juta Dollar untuk Keamanan</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-26-dunia-agen-ai-multi.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-26-dunia-agen-ai-multi.html</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0700</pubDate>
+      <description>Google DeepMind dan mitra umumkan pendanaan 10 juta dollar untuk riset keamanan AI multi-agen, seiring makin ramainya dunia digital oleh jutaan agen AI yang saling berinteraksi.</description>
+    </item>
     <item>
       <title>Tata Electronics Alami Serangan Siber, Data Manufaktur Apple Bocor</title>
       <link>https://blog.ttmi.my.id/posts/2026-06-25-tata-electronics-serangan-siber-data-apple-bocor.html</link>
@@ -132,20 +146,6 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-18-google-matikan-gemini-cli-pengguna-gratis.html</guid>
       <pubDate>Thu, 18 Jun 2026 00:00:00 +0700</pubDate>
       <description>Google resmi menutup akses Gemini CLI untuk pengguna gratis, Pro, dan Ultra pada 18 Juni 2026. Pengguna individu dialihkan ke Antigravity CLI, alat propietari baru berbasis Go, sementara kontributor sumber terbuka menyuarakan kekecewaan.</description>
-    </item>
-    <item>
-      <title>SpaceX Akuisisi Cursor Senilai 60 Miliar Dolar AS</title>
-      <link>https://blog.ttmi.my.id/posts/2026-06-17-spacex-akuisisi-cursor-60-miliar.html</link>
-      <guid>https://blog.ttmi.my.id/posts/2026-06-17-spacex-akuisisi-cursor-60-miliar.html</guid>
-      <pubDate>Wed, 17 Jun 2026 00:00:00 +0700</pubDate>
-      <description>SpaceX resmi mengakuisisi Anysphere, perusahaan di balik asisten pemrograman AI Cursor, dalam transaksi saham murni senilai 60 miliar dolar AS atau sekitar Rp960 triliun. Kesepakatan ini menjadi akuisisi terbesar di pasar alat pengembangan AI dan berpotensi mengubah arah industri pemrograman otonom.</description>
-    </item>
-    <item>
-      <title>Anthropic Tarik Fable 5 dan Mythos 5 demi Kontrol Ekspor AS</title>
-      <link>https://blog.ttmi.my.id/posts/2026-06-16-anthropic-tarik-fable-mythos-kontrol-ekspor.html</link>
-      <guid>https://blog.ttmi.my.id/posts/2026-06-16-anthropic-tarik-fable-mythos-kontrol-ekspor.html</guid>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 +0700</pubDate>
-      <description>Anthropic menonaktifkan akses global ke model Fable 5 dan Mythos 5 setelah pemerintah AS mengeluarkan kebijakan kontrol ekspor demi keamanan nasional. Langkah ini memicu perdebatan soal batas berbagi teknologi AI frontier dengan peneliti di luar negeri.</description>
     </item>
   </channel>
 </rss>
