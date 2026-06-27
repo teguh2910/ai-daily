@@ -5,7 +5,7 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 27 Jun 2026 08:11:31 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 08:43:03 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>John Jumper Tinggalkan Google DeepMind untuk Bergabung ke Anthropic</title>
@@ -13,6 +13,13 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-27-john-jumper-tinggalkan-deepmind-untuk-anthropic.html</guid>
       <pubDate>Sat, 27 Jun 2026 00:00:00 +0700</pubDate>
       <description>Penerima Nobel Kimia 2024 dan pencipta AlphaFold, John Jumper, resmi meninggalkan Google DeepMind untuk bergabung dengan Anthropic. Langkah ini menandai perpindahan talenta AI paling bergengsi tahun ini.</description>
+    </item>
+    <item>
+      <title>IHSG Anjlok 4,55% Sepekan ke 5.896, Asing Net Sell Rp302 Miliar</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-27-ihsg-anjlok-455-sepekan-ke-5896-asing-net-sell-rp302-miliar.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-27-ihsg-anjlok-455-sepekan-ke-5896-asing-net-sell-rp302-miliar.html</guid>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0700</pubDate>
+      <description>IHSG ditutup melemah 4,55% dalam sepekan ke 5.896,13 pada Jumat (26/6) dengan aksi jual asing Rp302 miliar dan kapitalisasi pasar susut Rp486 triliun, dipicu sentimen risk-off global dan tekanan di saham Grup Prajogo.</description>
     </item>
     <item>
       <title>Ivanti Sentry Rawan Eksploitasi: CVE-2026-10520 Raih Skor CVSS 10.0</title>
@@ -139,13 +146,6 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-20-claude-code-artifacts-dasbor-bersama.html</guid>
       <pubDate>Sat, 20 Jun 2026 00:00:00 +0700</pubDate>
       <description>Anthropic merilis fitur Artifacts di Claude Code untuk pelanggan Team dan Enterprise, memungkinkan dasbor interaktif yang diperbarui otomatis saat sesi coding berlangsung.</description>
-    </item>
-    <item>
-      <title>Anthropic Ajukan IPO, Valuasinya Tembus Rp18 Kuatrilyun</title>
-      <link>https://blog.ttmi.my.id/posts/2026-06-19-anthropic-ajukan-ipo-validasinya-rp18-kuatrilyun.html</link>
-      <guid>https://blog.ttmi.my.id/posts/2026-06-19-anthropic-ajukan-ipo-validasinya-rp18-kuatrilyun.html</guid>
-      <pubDate>Fri, 19 Jun 2026 00:00:00 +0700</pubDate>
-      <description>Anthropic, perusahaan di balik Claude, mengajukan S-1 ke SEC pada 1 Juni 2026...</description>
     </item>
   </channel>
 </rss>
