@@ -5,7 +5,7 @@
     <link>https://blog.ttmi.my.id</link>
     <description>Ringkasan harian perkembangan AI dalam Bahasa Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 27 Jun 2026 08:43:03 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 09:18:56 +0700</lastBuildDate>
     <atom:link href="https://blog.ttmi.my.id/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>John Jumper Tinggalkan Google DeepMind untuk Bergabung ke Anthropic</title>
@@ -20,6 +20,13 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-27-ihsg-anjlok-455-sepekan-ke-5896-asing-net-sell-rp302-miliar.html</guid>
       <pubDate>Sat, 27 Jun 2026 00:00:00 +0700</pubDate>
       <description>IHSG ditutup melemah 4,55% dalam sepekan ke 5.896,13 pada Jumat (26/6) dengan aksi jual asing Rp302 miliar dan kapitalisasi pasar susut Rp486 triliun, dipicu sentimen risk-off global dan tekanan di saham Grup Prajogo.</description>
+    </item>
+    <item>
+      <title>CVE-2026-12957: Amazon Q Developer Rawan Bocorkan Kredensial AWS</title>
+      <link>https://blog.ttmi.my.id/posts/2026-06-27-cve-2026-12957-amazon-q-developer-bocorkan-kredensial-aws.html</link>
+      <guid>https://blog.ttmi.my.id/posts/2026-06-27-cve-2026-12957-amazon-q-developer-bocorkan-kredensial-aws.html</guid>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0700</pubDate>
+      <description>Kerentanan kritis CVE-2026-12957 pada Amazon Q Developer memungkinkan penyerang mengeksekusi kode dan mencuri kredensial AWS hanya dengan repo berbahaya yang di-clone korban. Perbarui ekstensi IDE segera.</description>
     </item>
     <item>
       <title>Ivanti Sentry Rawan Eksploitasi: CVE-2026-10520 Raih Skor CVSS 10.0</title>
@@ -139,13 +146,6 @@
       <guid>https://blog.ttmi.my.id/posts/2026-06-21-ihsg-tertekan-0-78-bi-rate-naik-5-75.html</guid>
       <pubDate>Sun, 21 Jun 2026 00:00:00 +0700</pubDate>
       <description>IHSG ditutup melemah 0,78% ke 6.172,34 usai BI naikkan suku bunga 25 bps menjadi 5,75%. MSCI pertahankan Indonesia sebagai emerging market dengan catatan transparansi.</description>
-    </item>
-    <item>
-      <title>Claude Code Artifacts Ubah Sesi Coding Jadi Dasbor Langsung</title>
-      <link>https://blog.ttmi.my.id/posts/2026-06-20-claude-code-artifacts-dasbor-bersama.html</link>
-      <guid>https://blog.ttmi.my.id/posts/2026-06-20-claude-code-artifacts-dasbor-bersama.html</guid>
-      <pubDate>Sat, 20 Jun 2026 00:00:00 +0700</pubDate>
-      <description>Anthropic merilis fitur Artifacts di Claude Code untuk pelanggan Team dan Enterprise, memungkinkan dasbor interaktif yang diperbarui otomatis saat sesi coding berlangsung.</description>
     </item>
   </channel>
 </rss>
